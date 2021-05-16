@@ -1,12 +1,14 @@
-package KR;
+/*
+* 5.	Сгенерировать пароль для пользователя.
+* Требования: длина от 6 до 20 символов, должен быть ровно один символ подчеркивания,
+* хотя бы две заглавных буквы, не более 5 цифр, любые две цифры подряд недопустимы.
+* */
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class Task_5 {
-    /*1.	Сгенерировать пароль для пользователя. Требования: длина от 6 до 20 символов, должен быть ровно один символ подчеркивания,
-    хотя бы две заглавных буквы, не более 5 цифр, любые две цифры подряд недопустимы.*/
+public class Task_5_2 {
     public static void main(String[] args)
     {
         int PasswordLength = (int)(Math.random()*15)+5;
@@ -39,18 +41,4 @@ public class Task_5 {
         System.out.println(str);
     }
 }
-class Task_5_2{
-    /*2.	Вывести квадрат 7 на 7 из случайных букв*/
-    public static void main(String[] args){
-        Random p = new Random();
-        String str = "abcdefghijklmnopqrstuvwxyz";
 
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){
-                char ch = str.charAt(p.nextInt(str.length()) );
-                System.out.print(ch);
-            }
-            System.out.println();
-        }
-    }
-}
